@@ -1,22 +1,23 @@
-# idiek sau kaskaip:
-# klase ir objektu ir biblioteka
-# failus ir funkcias
-# zodyna ir sprendimus
-# sarasa ir kilpos
-
 ###############################################################################
-
+import helps
 import math 
 
+print("If you would like to see a load of definitions that are essetial\n"
+      "to your understanding type ' i(b) ' to see a list of definitions\n"
+      "into an empty console input")
+
 dvi= int(input("enter ' 1 ' for pH calculator: strong acid vs strong base \n"
-           "enter ' 2 ' for pH calculator: strong acid vs weak acid .etc"
-           ))
+           "enter ' 2 ' for pH calculator: strong acid vs weak acid .etc \n"
+           ":"))
 
 if dvi == 1:
 
 
 # user enters values for moles of the base and acid,
 # and those values are stored in basemol and acidmol
+    
+    
+    
     
     print(" This is the pH calculator strong acid vs strong base ")
     basemol= float(input("enter moles of your strong base : "))
@@ -51,14 +52,38 @@ if dvi == 1:
         acidc= acidmol2/acidv
         acidPH= (-math.log(acidc, 10))
         print("This is the pH of your final solution: ", "{:.5f}".format(acidPH))
+        print("If you would like to see a load of definitions that are essetial\n"
+              "to your understanding type ' i(b) ' to see a list of definitions")
+        
     
 
 
 
-    
 ###############################################################################    
     
 if dvi == 2:  
     
     print("This is the pH calculator strong acid vs weak acid .etc ")
+    tri=int(input("enter ' 1 ' for stong acid vs weak base\n"
+              "enter ' 2 ' fro strong base vs weak acid"
+              ": "))
+    
+    if tri == 1:
+        
+        #so far only works when the moles of the weak base is larger than 
+        # the moles of the stong acid 
+        
+        wbasemol= float(input("enter the moles of the weak base: "))
+        sacidmol= float(input("enter the moles of the strong acid: "))
+        pKa= float(input("enter the pKa of the weak base: "))
+        
+        # im not explaining this mess to anyone
+        
+        if wbasemol > sacidmol:
+            conacid= sacidmol
+            wbasemol2= wbasemol - sacidmol
+            wc= wbasemol2 / conacid
+            logwc= math.log(wc, 10)
+            pH= pKa + logwc
+            print("This is the pH of your final solution: ", "{:.5f}".format(pH))
     
