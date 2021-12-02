@@ -46,37 +46,26 @@ except:
 #tells user to trpe another number if its out of range
 #if in range, prints acid. Able to use acid variable for calculations and recieve the pka from the dictionary
 
+#get inputs from user
 
-
-import pylab
-
-
-####
-
-##example of the programme of the titration curve
-##titration of 100ml of 2M hcl with 1M NaOH
-
-a1,b1,a2=2,0.1,1
-c,b2=a1*b1,a1*b1/a2
-
-n,eps=50,1.e-10
-db = b2/n
-
-bs1=pylab.linspace(db,b2,n)
-bs2=pylab.linspace(b2,2*b2,n)
-
-as1=-pylab.log10((c-a2*bs1+eps)/(b1+bs2))
-as2=14+pylab.log10((a2*bs2-c+eps)/(b1+bs2))
-
-pylab.plot(bs1,as1,color='r')
-pylab.plot([bs1[-1],bs2[1]],[as1[-1],as2[1]],color='r')
-pylab.plot(bs2[1:],as2[1:],color='r')
-
-pylab.title('titration curve')
-pylab.xlabel('vol of naoh added')
-pylab.ylabel('pH')
-pylab.grid()
-
-pylab.show()
-
-##I tried to commit it locally
+print('Acid or Base ? Put your input as acid, or base')
+acba=input()
+print('Strong or Weak ? Put your input as strong or weak')
+strength=input()
+print('Prvide the volume of solution in Litre')
+svol=float(input())/1000
+print('Provide the molarity')
+mol=float(input())
+if strength == "weak":
+    if acba == "acid":
+        print('Provide tthe Ka Value.')
+    if acba == "base":
+        print('Provide the Kb value.')
+    valuek=input()
+if acba =="acid":
+    print('Provide the added volume for strong base in Litre')
+else:
+    print('Provide the added volume for strong acid in Litre')
+vol=float(input())/1000
+print('Provide the molarity of the titrating solution')
+tmol=float(input())

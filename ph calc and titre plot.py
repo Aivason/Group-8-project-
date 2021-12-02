@@ -87,3 +87,30 @@ if dvi == 2:
             pH= pKa + logwc
             print("This is the pH of your final solution: ", "{:.5f}".format(pH))
     
+###
+###
+###
+#Titration curve programme
+#get inputs from user
+
+print('Acid or Base ? Put your input as acid, or base')
+acba=input()
+print('Strong or Weak ? Put your input as strong or weak')
+strength=input()
+print('Prvide the volume of solution in Litre')
+svol=float(input())/1000
+print('Provide the molarity')
+mol=float(input())
+if strength == "weak":
+    if acba == "acid":
+        print('Provide tthe Ka Value.')
+    if acba == "base":
+        print('Provide the Kb value.')
+    valuek=input()
+if acba =="acid":
+    print('Provide the added volume for strong base in Litre')
+else:
+    print('Provide the added volume for strong acid in Litre')
+vol=float(input())/1000
+print('Provide the molarity of the titrating solution')
+tmol=float(input())
