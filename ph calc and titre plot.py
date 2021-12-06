@@ -91,16 +91,18 @@ if dvi == 2:
 ###
 ###
 #Titration curve programme
-#get inputs from user
+
+
 
 import math
+
+
 while True:
-    
     print('Acid or Base ? Put your input as acid, or base')
     acba=input()
     print('Strong or Weak ? Put your input as strong or weak')
     strength=input()
-    print('Prvide the volume of solution in ml')
+    print('Provide the volume of solution in ml')
     svol=(float(input()))/1000
     print('Provide the molarity')
     mol=float(eval(input()))
@@ -130,7 +132,7 @@ while True:
     while vol2<therange:
         if True:
             
-            
+####            
             if strength=="strong":
                 comparemole=(((svol)*mol) - (((vol2)*mol2)))
                 if comparemole==(svol*mol):
@@ -148,7 +150,7 @@ while True:
                     Hcon=comparemole/((vol2+svol))
                     pH=-math.log(Hcon,10)
                 
-                
+####                
             if strength=="weak":
                 comparemole=(((svol)*mol) - (((vol2)*mol2)))
                 
