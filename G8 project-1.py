@@ -46,12 +46,14 @@ except:
 #tells user to trpe another number if its out of range
 #if in range, prints acid. Able to use acid variable for calculations and recieve the pka from the dictionary
 
-#get inputs from user
 
+
+####
 
 import math
+
+
 while True:
-    
     print('Acid or Base ? Put your input as acid, or base')
     acba=input()
     print('Strong or Weak ? Put your input as strong or weak')
@@ -86,7 +88,7 @@ while True:
     while vol2<therange:
         if True:
             
-            
+####            
             if strength=="strong":
                 comparemole=(((svol)*mol) - (((vol2)*mol2)))
                 if comparemole==(svol*mol):
@@ -104,7 +106,7 @@ while True:
                     Hcon=comparemole/((vol2+svol))
                     pH=-math.log(Hcon,10)
                 
-                
+####                
             if strength=="weak":
                 comparemole=(((svol)*mol) - (((vol2)*mol2)))
                 
