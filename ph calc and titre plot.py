@@ -56,10 +56,6 @@ if dvi == 1:
               "to your understanding type ' i(b) ' to see a list of definitions")
         
     
-
-
-
-###############################################################################    
     
 if dvi == 2:  
     
@@ -86,7 +82,12 @@ if dvi == 2:
             logwc= math.log(wc, 10)
             pH= pKa + logwc
             print("This is the pH of your final solution: ", "{:.5f}".format(pH))
-    
+ 
+
+
+
+
+###############################################################################    
 ###
 ###
 ###
