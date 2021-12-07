@@ -51,7 +51,8 @@ except:
 ####
 
 import math
-
+import tkinter
+from tkinter import *
 
 while True:
     print('Acid or Base ? Put your input as acid, or base')
@@ -145,5 +146,10 @@ while True:
         vol2=vol2+(0.05/1000)
         vol2=round(vol2,5)
 
-
-###This is a test
+###
+    graph_window=Tk()
+    graph_window.configure(background='#00B88A')
+    graph_window.title("Graph")
+    graph_window.geometry('600x680+210+35')
+    graph_window.resizable(width=FALSE, height=FALSE)
+    canvus_1 = Canvas(graph_window,height=600,width=600,bg='white')
