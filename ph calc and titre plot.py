@@ -2,12 +2,15 @@
 import helps
 import math 
 
+print('Welcome to the pH calculator!')
+print('-----------------------------')
+
 print("If you would like to see a load of definitions that are essetial\n"
       "to your understanding type ' i(b) ' to see a list of definitions\n"
       "into an empty console input")
 
-dvi= int(input("enter ' 1 ' for pH calculator: strong acid vs strong base \n"
-           "enter ' 2 ' for pH calculator: strong acid vs weak acid .etc \n"
+dvi= int(input("Enter ' 1 ' for pH calculator: strong acid vs strong base \n"
+           "Enter ' 2 ' for pH calculator: strong acid vs weak acid .etc \n"
            ":"))
 
 if dvi == 1:
