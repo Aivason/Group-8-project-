@@ -3,7 +3,7 @@
 ###there are no module names helps#######
 import math 
 
-print('please type ph calculation for 1, titration solution for 2')
+print('Please type 1 for ph calculation , 2 for titration solution ')
 useranswer=int(input())
 if useranswer==1:
 
