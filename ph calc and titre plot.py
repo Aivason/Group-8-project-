@@ -93,39 +93,36 @@ if useranswer==1:
  
 
 
-else:
-
-###############################################################################    
-###
-###
-###
 #Titration curve programme
 
-
-    
+else:
     import math
+    import tkinter
+    from tkinter import *
     
-    
+#Receive necessary input information from the user.
     while True:
         print('Acid or Base ? Put your input as acid, or base')
         acba=input()
         print('Strong or Weak ? Put your input as strong or weak')
         strength=input()
         print('Provide the volume of solution in ml')
-        svol=(float(input()))/1000
+        svol=(float(input()))
         print('Provide the molarity')
         mol=float(eval(input()))
         if strength=="weak":
             if acba=="acid":
-                print('Provide the Ka Value.')
+                print('Provide the Ka Value.','in the format of 6.6*10**-6')
             if acba=="base":
-                print('Provide the is the Kb Value.')
+                print('Provide the is the Kb Value.','in the format of 6.6*10**-6')
             kval=(input())
             kval=eval(kval)
+            
         if acba=="acid":
             print('Provide the added volume for strong base in ml')
         else:
             print('Provide the added volume for strong base in ml')
+#Store the necessary inputs and make lists.            
         vol2=input()
         vol2=float(vol2)/1000
         print("what is the Molarity of the titrating solution?")
@@ -141,7 +138,7 @@ else:
         while vol2<therange:
             if True:
                 
-    ####            
+    ####Strong acid - Strong base titrating            
                 if strength=="strong":
                     comparemole=(((svol)*mol) - (((vol2)*mol2)))
                     if comparemole==(svol*mol):
@@ -159,7 +156,7 @@ else:
                         Hcon=comparemole/((vol2+svol))
                         pH=-math.log(Hcon,10)
                     
-    ####                
+    ####Weak acid - Strong base titrating                
                 if strength=="weak":
                     comparemole=(((svol)*mol) - (((vol2)*mol2)))
                     
@@ -194,8 +191,14 @@ else:
             xcoord.append(vol2)
             ycoord.append(pH)
             if vol2==(test):
-                print("pH=",pH)
+                print('pH=',pH)
             vol2=vol2+(0.05/1000)
             vol2=round(vol2,5)
 
-###
+#Plotting titration curve -> need to be improved.
+        graph_window=Tk()
+        graph_window.configure(background='#00B88A')
+        graph_window.title("Graph")
+        graph_window.geometry('600x680+210+35')
+        graph_window.resizable(width=FALSE, height=FALSE)
+        canvus_1 = Canvas(graph_window,height=600,width=600,bg='white')
