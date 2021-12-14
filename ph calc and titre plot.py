@@ -99,7 +99,6 @@ else:
     import math
     import tkinter
     from tkinter import *
-    
 #Receive necessary input information from the user.
     while True:
         print('Acid or Base ? Put your input as acid, or base')
@@ -107,7 +106,7 @@ else:
         print('Strong or Weak ? Put your input as strong or weak')
         strength=input()
         print('Provide the volume of solution in ml')
-        svol=(float(input()))
+        svol=(float(input()))/1000
         print('Provide the molarity')
         mol=float(eval(input()))
         if strength=="weak":
@@ -196,9 +195,10 @@ else:
             vol2=round(vol2,5)
 
 #Plotting titration curve -> need to be improved.
-        graph_window=Tk()
-        graph_window.configure(background='#00B88A')
-        graph_window.title("Graph")
-        graph_window.geometry('600x680+210+35')
-        graph_window.resizable(width=FALSE, height=FALSE)
-        canvus_1 = Canvas(graph_window,height=600,width=600,bg='white')
+        root=Tk()
+        root.configure(background='#00B88A')
+        root.title("Graph")
+        root.geometry('600x680+210+35')
+        root.resizable(width=FALSE, height=FALSE)
+        canvus_1 = Canvas(root,height=600,width=600,bg='white')
+        root.mainloop()
