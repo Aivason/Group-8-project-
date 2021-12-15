@@ -127,13 +127,10 @@ else:
         print("what is the Molarity of the titrating solution?")
         mol2=input()
         mol2=float(mol2)
-        pointlist=[]
         therange=svol*2
         truevol=vol2
         test=truevol
         vol2=0
-        xcoord=[]
-        ycoord=[]
         while vol2<therange:
             if True:
                 
@@ -186,9 +183,7 @@ else:
                 ex=vol2
                 ey=pH
             if acba=="base":
-                pH=14-pH
-            xcoord.append(vol2)
-            ycoord.append(pH)
+                pH=14-pOH
             if vol2==(test):
                 print('pH=',pH)
             vol2=vol2+(0.05/1000)
