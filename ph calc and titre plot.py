@@ -3,34 +3,6 @@
 ###there are no module names helps#######
 import math 
 
-
-weakacids = {'Oxalic Acid': 1.27,'Sulfurous Acid': 1.85,'Phosphoric Acid':2.16,
-             'Nitrous Acid': 3.25,'Hydrofluoric Acid':3.20,'Methanoic Acid':3.75,
-             'Benzoic Acid':4.204 ,'Acetic Acid':4.75,'Formic Acid':3.75
-             }
-#weakacid and its pka value
-
-weakacidslist = list(weakacids.keys())
-for c in range(len(weakacidslist)):
-    print(c+1,':',weakacidslist[c])
-
-#prints a list of all weakacids for user to choose from
-
-strongacids = {'Hydrochloric Acid':'-6.3','Nitric Acid':'-1.5','Sulfuric Acid':'-3', 
-               'Hydrobromic Acid': '-8.7','Hydroiodic Acid':'-9.3',
-               'Perchloric Acid':'-8','Chloric Acid': '1.0'
-                  }
-    #sulfuric acid is first dissociation
-strongacidslist = list(strongacids.keys())
-for c in range(len(strongacidslist)):
-    print(c+10,':',strongacidslist[c])
-    
-    
-acid = int(input('What acid would you like to use? (enter the number beside the acid): '))
-if acid>10:
-    acidindex = (acid-10)
-    stringacidslist[4]
-
 print('Please type 1 for ph calculation , 2 for titration solution ')
 useranswer=int(input())
 if useranswer==1:
