@@ -99,7 +99,7 @@ else:
     import math
     import tkinter
     from tkinter import *
-#Receive necessary input information from the user.
+#Receive necessary inputs from the user.
     while True:
         print('Acid or Base ? Put your input as acid, or base')
         acba=input()
@@ -113,7 +113,7 @@ else:
             if acba=="acid":
                 print('Provide the Ka Value.','in the format of 6.6*10**-6')
             if acba=="base":
-                print('Provide the is the Kb Value.','in the format of 6.6*10**-6')
+                print('Provide the Kb Value.','in the format of 6.6*10**-6')
             kval=(input())
             kval=eval(kval)
             
@@ -121,7 +121,7 @@ else:
             print('Provide the added volume for strong base in ml')
         else:
             print('Provide the added volume for strong base in ml')
-#Store the necessary inputs and make lists.            
+           
         vol2=input()
         vol2=float(vol2)/1000
         print("what is the Molarity of the titrating solution?")
@@ -134,7 +134,7 @@ else:
         while vol2<therange:
             if True:
                 
-    ####Strong acid - Strong base titrating            
+    #### Strong acid - Strong base titrating            
                 if strength=="strong":
                     comparemole=(((svol)*mol) - (((vol2)*mol2)))
                     if comparemole==(svol*mol):
@@ -152,7 +152,7 @@ else:
                         Hcon=comparemole/((vol2+svol))
                         pH=-math.log(Hcon,10)
                     
-    ####Weak acid - Strong base titrating                
+    #### Weak acid - Strong base titrating                
                 if strength=="weak":
                     comparemole=(((svol)*mol) - (((vol2)*mol2)))
                     
