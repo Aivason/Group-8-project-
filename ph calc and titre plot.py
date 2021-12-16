@@ -92,31 +92,46 @@ if useranswer==1:
             
         
         
-    if dvi == 2:  
-        
+    if dvi == 2:   
+#                         line 97-134 is chris's part        
         print("This is the pH calculator strong acid vs weak acid .etc ")
-        tri=int(input("enter ' 1 ' for stong acid vs weak base\n"
-                  "enter ' 2 ' fro strong base vs weak acid"
-                  ": "))
-        
-        if tri == 1:
-            
-            #so far only works when the moles of the weak base is larger than 
-            # the moles of the stong acid 
-            
-            wbasemol= float(input("enter the moles of the weak base: "))
-            sacidmol= float(input("enter the moles of the strong acid: "))
-            pKa= float(input("enter the pKa of the weak base: "))
-            
-            # im not explaining this mess to anyone
-            
-            if wbasemol > sacidmol:
-                conacid= sacidmol
-                wbasemol2= wbasemol - sacidmol
-                wc= wbasemol2 / conacid
-                logwc= math.log(wc, 10)
-                pH= pKa + logwc
-                print("This is the pH of your final solution: ", "{:.5f}".format(pH))
+        e=input('Is the excess reactant the acid or the base? ')
+        s=input('Is it strong or weak? ')
+        if s=='strong':
+            m=float(input('From the chemical equation, how many molecules of the excess? '))
+            c=float(input('What is the concentration of the acid in molar? '))
+            v=float(input('What is the volume in mL? '))
+            n=c*(v/1000)
+            C=float(input('What is the concentration of the base in molar? '))
+            V=float(input('What is the volume of the base in mL? '))
+            N=C*(V/1000)
+            if e=='acid':
+                a=math.log((n-(N*m))/((v+V)/1000),(10))*-1
+                print('pH =' ,a)
+            elif e=='base':
+                a=14-math.log((N-(n*m))/((v+V)/1000),(10))*-1
+                print('pH =' ,a)
+    
+        elif s=='weak':  
+    
+            q=input('Do you know the concentration of the excess? (y/n) ')
+            if q=='n':
+                m=float(input('What is the mass of the excess in g? '))
+                M=float(input('What is the gram formula mass? '))
+                n=m/M
+                v=float(input('What is the volume in mL? '))
+                c=n/v
+            elif q=='y':
+                c=float(input('What is the concentration in molar? '))
+    
+            if e=='acid':
+                K=float(input('What is the pKa?'))
+                a=-1*math.log(math.sqrt((10**-K)*c),(10))
+                print('pH =' ,a)
+            elif e=='base':
+                K=float(input('What is the pKb?'))
+                a=14-math.log(math.sqrt((10**-K*c)),(10)*-1)
+                print('pH =' ,a)
  
 
 
