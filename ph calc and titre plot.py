@@ -61,8 +61,8 @@ if useranswer==1:
     # user enters values for moles of the base and acid,
     # and those values are stored in basev and acidv
     
-        basev= float(input("enter volume of your base: "))
-        acidv= float(input("enter volume of your acid: "))
+        basev= float(input("enter volume (L) of your base: "))
+        acidv= float(input("enter volume (L) of your acid: "))
     
     # Here if the moles of the base " basemol " is larger than moles of the acid
     # " acidmol " it will subtract acidmol from base mole, to get the final moles
