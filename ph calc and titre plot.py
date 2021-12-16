@@ -1,6 +1,33 @@
 ###############################################################################
-###import helps#######
-###there are no module names helps#######
+"""defines the essentials 
+"""
+
+acid= "-An acid is a proton donor."
+
+base= "-A base is a proton acceptor." 
+
+ph= "-pH = -log10[H^+]."
+
+stongacid= "-A strong acid is one which completely dissociates in aqueous solution."
+
+weakacid= "-A weak acid is one which partially dissociates in aqeuous solution."
+
+conjugate_acid_base_pair= "-A conjugate acid base pair has its base and its conjugate acid\n or an acid and its conugate base."
+
+Ka= "-Ka is how readily the acid dissociates. (high Ka= high pH)"
+
+b=[acid, base, ph, stongacid, weakacid, conjugate_acid_base_pair, Ka]
+
+def i(n):
+    for b in n:
+        print(b)
+
+#
+#
+#
+
+'''the ph calc'''
+        
 import math 
 
 print('Please type 1 for ph calculation , 2 for titration solution ')
