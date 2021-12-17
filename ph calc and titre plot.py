@@ -64,6 +64,9 @@ if useranswer==1:
     print("If you would like to see a load of definitions that are essetial\n"
           "to your understanding type ' i(b) ' to see a list of definitions\n"
           "into an empty console input")
+   
+    print("To see short list of weak acids or strong acids type  'i(wa) ' or ' i(sa) '\n
+    into an empty console input")
     
     dvi= int(input("Enter ' 1 ' for pH calculator: strong acid vs strong base \n"
                "Enter ' 2 ' for pH calculator: strong acid vs weak acid .etc \n"
