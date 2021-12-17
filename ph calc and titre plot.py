@@ -1,4 +1,28 @@
 ###############################################################################
+# list of weak and strong acids
+#!!!! DICTIONARIES MADE BY POPPY 
+wa = {'Oxalic Acid': 1.27,'Sulfurous Acid': 1.85,'Phosphoric Acid':2.16,
+                 'Nitrous Acid': 3.25,'Hydrofluoric Acid':3.20,'Methanoic Acid':3.75,
+                 'Benzoic Acid':4.204 ,'Acetic Acid':4.75,'Formic Acid':3.75
+                 }
+def  i(wa):
+        
+        for key in wa.keys():
+            print("weak acid : {} , pKa : {}".format(key,wa[key]))
+            
+            
+            
+            strongacids = {'Hydrochloric Acid':'-6.3','Nitric Acid':'-1.5','Sulfuric Acid':'-3', 
+                   'Hydrobromic Acid': '-8.7','Hydroiodic Acid':'-9.3',
+                   'Perchloric Acid':'-8','Chloric Acid': '1.0'
+                      }
+            
+            def  i(sa):
+                
+                for key in sa.keys():
+                    print("strong acid : {} , pKa : {}".format(key,sa[key]))   
+
+
 """defines the essentials 
 """
 
